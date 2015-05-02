@@ -3,5 +3,6 @@ Vagrant.configure(2) do |config|
     ubuntu.vm.box = "ubuntu/trusty64"
 	ubuntu.vm.provision :shell, path: "update.sh"
 	ubuntu.vm.provision :shell, path: "node.sh"
+	ubuntu.vm.provision :shell, path: "git.sh"
   end
 end
