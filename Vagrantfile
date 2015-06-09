@@ -4,5 +4,6 @@ Vagrant.configure(2) do |config|
 	ubuntu.vm.provision :shell, path: "update.sh"
 	ubuntu.vm.provision :shell, path: "node.sh"
 	ubuntu.vm.provision :shell, path: "git.sh"
+	ubuntu.vm.provision :shell, path: "ssh.sh"
   end
 end
