@@ -1,3 +1,7 @@
+require 'yaml'
+
+settings = YAML.load_file 'vagrant.yml'
+
 Vagrant.configure(2) do |config|
   config.vm.define "ubuntu" do |ubuntu|
     ubuntu.vm.box = "ubuntu/trusty64"
@@ -6,4 +10,5 @@ Vagrant.configure(2) do |config|
 	ubuntu.vm.provision :shell, path: "git.sh"
 	ubuntu.vm.provision :shell, path: "ssh.sh"
   end
+  config.vm.synced_folder settings['git']['path'], "/home/vagrant/git"
 end
