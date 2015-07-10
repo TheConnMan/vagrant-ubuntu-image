@@ -3,6 +3,7 @@ require 'yaml'
 settings = YAML.load_file 'vagrant.yml'
 
 Vagrant.configure(2) do |config|
+  #config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.define "ubuntu" do |ubuntu|
     ubuntu.vm.box = "ubuntu/trusty64"
 	ubuntu.vm.provision :shell, path: "update.sh"
