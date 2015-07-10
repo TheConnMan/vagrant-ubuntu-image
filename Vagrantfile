@@ -9,6 +9,7 @@ Vagrant.configure(2) do |config|
 	ubuntu.vm.provision :shell, path: "node.sh"
 	ubuntu.vm.provision :shell, path: "git.sh"
 	ubuntu.vm.provision :shell, path: "ssh.sh"
+	#ubuntu.vm.provision :shell, path: "python.sh"
 	#ubuntu.vm.provision :shell, path: "docker.sh"
 	ubuntu.vm.provision :shell, path: "extra.sh"
   end
