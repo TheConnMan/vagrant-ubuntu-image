@@ -15,5 +15,8 @@ Vagrant.configure(2) do |config|
         #ubuntu.vm.provision :shell, path: "docker.sh"
         ubuntu.vm.provision :shell, path: "extra.sh"
     end
+    config.vm.provider "virtualbox" do |v|
+        v.memory = 2048
+    end
     config.vm.synced_folder settings['git']['path'], "/home/vagrant/git"
 end
