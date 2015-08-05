@@ -6,15 +6,15 @@ Vagrant.configure(2) do |config|
     #config.vm.network "forwarded_port", guest: 8080, host: 8080
     config.vm.define "ubuntu" do |ubuntu|
         ubuntu.vm.box = "ubuntu/trusty64"
-        ubuntu.vm.provision :shell, path: "update.sh"
-        ubuntu.vm.provision :shell, path: "node.sh"
-        ubuntu.vm.provision :shell, path: "git.sh"
-        ubuntu.vm.provision :shell, path: "ssh.sh"
-        #ubuntu.vm.provision :shell, path: "java.sh"
-        #ubuntu.vm.provision :shell, path: "python.sh"
-        #ubuntu.vm.provision :shell, path: "google-python-app-engine.sh"
-        #ubuntu.vm.provision :shell, path: "docker.sh"
-        ubuntu.vm.provision :shell, path: "extra.sh"
+        ubuntu.vm.provision :shell, path: "shell/update.sh"
+        ubuntu.vm.provision :shell, path: "shell/node.sh"
+        ubuntu.vm.provision :shell, path: "shell/git.sh"
+        ubuntu.vm.provision :shell, path: "shell/ssh.sh"
+        #ubuntu.vm.provision :shell, path: "shell/java.sh"
+        #ubuntu.vm.provision :shell, path: "shell/python.sh"
+        #ubuntu.vm.provision :shell, path: "shell/google-python-app-engine.sh"
+        #ubuntu.vm.provision :shell, path: "shell/docker.sh"
+        ubuntu.vm.provision :shell, path: "shell/extra.sh"
     end
     config.vm.provider "virtualbox" do |v|
         v.memory = 2048
