@@ -1,2 +1,5 @@
 git:
   path: /path/to/git/folder or C:\Users\Me\path\to\git\folder
+aws:
+  key: AWS_ACCESS_KEY_ID
+  secret: AWS_SECRET_ACCESS_KEY
