@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
         #ubuntu.vm.provision :shell, path: "shell/java.sh"
         #ubuntu.vm.provision :shell, path: "shell/python.sh"
         #ubuntu.vm.provision :shell, path: "shell/google-python-app-engine.sh"
-        #ubuntu.vm.provision :shell, path: "shell/gvm.sh"
+        #ubuntu.vm.provision :shell, path: "shell/sdkman.sh"
         #ubuntu.vm.provision :shell, path: "shell/docker.sh"
         ubuntu.vm.provision :shell, path: "shell/ssh.sh"
         ubuntu.vm.provision :shell, path: "shell/extra.sh"
