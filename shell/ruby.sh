@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+apt-get remove ruby -y
 curl -#LO https://rvm.io/mpapis.asc
 gpg --import mpapis.asc
 rm mpapis.asc
